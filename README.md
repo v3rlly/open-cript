@@ -1,4 +1,4 @@
-# open-cript
+# opencript
 OPENCART PASSWORD DECRYPTOR BASED WORD LIST
 
 
