@@ -1,16 +1,22 @@
 # open-cript
-OPENCART PASSWORD HASH GENERATOR
+OPENCART PASSWORD DECRYPTOR BASED WORD LIST
 
 
 USAGE
 ```
-php opencript.php PASSWORD SALT
+php opencript.php HASH PASSWORD wordlis.txt
 ```
 
   
   
 DEMO
 ```
-C:\Users\demo\open-cript-master>php opencript.php admin oInuc412L
-RESULT: d69ab6a7b73bf52fe58adf3ba6b9c84ee27a0ad0
+C:\Users\pablo\open-cript-master>php opencript.php f2e9efd4a366507c5b1cba7749659d93d61ae335 oInuc412L wordlis.txt
+
+HASH:f2e9efd4a366507c5b1cba7749659d93d61ae335
+SALT:oInuc412L
+PASSWORD:12345
+TIME:3.814697265625E-5
 ```
+
+###### _NEED ME? [pablov3rlly gmail com]_
