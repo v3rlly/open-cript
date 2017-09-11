@@ -1,27 +1,24 @@
 <?php
-$password = $argv[1];
+$pwd = $argv[1];
 $salt = $argv[2];
-$wordlist = $argv[3];
+$wl = $argv[3];
 
-$lines = file($wordlist, FILE_IGNORE_NEW_LINES);
-$time0 = microtime(true);
+$lin = file($wl, FILE_IGNORE_NEW_LINES);
+$in = microtime(true);
 
-foreach($lines as $string)
+foreach($lin as $string)
 {
    $hashed=SHA1($salt.SHA1($salt.SHA1($string)));
-   if($hashed==$password){out($string,$password,'1',$time0,$salt); break;}else{}
-   if(!next($lines) ) { out($string,$password,'0',$time0,$salt); break;} else{}
+   if($hashed==$pwd){out($string,$pwd,'1',$in,$salt); break;}else{}
+   if(!next($lin) ) { out($string,$pwd,'0',$in,$salt); break;} else{}
 }
-
-function out($string,$hashed,$found,$start,$salt){
-$time = microtime(true) - $time0;
-
+function out($string,$hashed,$found,$in,$salt){
+$t = microtime(true) - $in;
 	if($found=='1') {
-		echo "\nHASH:".$hashed."\nSALT:".$salt."\nPASSWORD:".$string."\nTIME:".$time."\n";
+		echo "\nHASH:".$hashed."\nSALT:".$salt."\nPASSWORD:".$string."\nTIME:".$t."\n";
 	}
 	else {
-		echo "not foud\nTIME: ".$time."\n";
+		echo "not foud\nTIME: ".$t."\n";
 	}
 }
-
 ?>
