@@ -29,17 +29,17 @@ else {
 	$lin = file($wl, FILE_IGNORE_NEW_LINES);
 	$in = microtime(true);
 
-	echo "\nPASSWORD: ".$pwd."\nSALT: ".$salt."\n";
+	echo "\nHASH: ".$pwd."\nSALT: ".$salt."\n";
 
 
 function out($str,$found,$in,$size){
 	$t = microtime(true) - $in;
 	
 	if($found==1) {
-		echo "\n\n Found: ".$str."\n TIME:".$t."\n"."\n NUMBER OF WORDS TESTED:".$size."\n";
+		echo "\n\n Found: ".$str."\n TIME:".$t."\n"."\n NUMBER OF STRINGS TESTED:".$size."\n";
 	}
 	else {
-		echo "\n\n Not Foud\n TIME: ".$t."\n"."\n NUMBER OF WORDS TESTED:".$size."\n";
+		echo "\n\n Not Foud\n TIME: ".$t."\n"."\n NUMBER OF STRINGS TESTED:".$size."\n";
 	}
 }
 
