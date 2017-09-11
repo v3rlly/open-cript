@@ -4,7 +4,7 @@ OPENCART PASSWORD DECRYPTOR BASED WORD LIST
 
 USAGE
 ```
-php opencript.php HASH PASSWORD wordlis.txt
+php opencript.php HASH SALT wordlis.txt
 ```
 
   
