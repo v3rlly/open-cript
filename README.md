@@ -8,15 +8,18 @@ php opencript.php <HASH> <SALT> <WORDLIST>
 ```
 
   
-  
 DEMO
 ```
 C:\Users\demo\open-cript-master>php opencript.php f2e9efd4a366507c5b1cba7749659d93d61ae335 oInuc412L wordlist_demo.txt
 
-HASH:f2e9efd4a366507c5b1cba7749659d93d61ae335
-SALT:oInuc412L
-PASSWORD:12345
-TIME:3.814697265625E-5
+HASH: f2e9efd4a366507c5b1cba7749659d93d61ae335
+SALT: oInuc412L
+
+
+ Found: 12345
+ TIME:0.00013303756713867
+
+ NUMBER OF STRINGS TESTED:9
 ```
 
 ## See too:
