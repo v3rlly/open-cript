@@ -19,4 +19,7 @@ PASSWORD:12345
 TIME:3.814697265625E-5
 ```
 
+## See too:
+[How to brute opencart passwords - tutorial](https://github.com/pabloverlly/brute-force-opencart-documentation)
+
 ###### _NEED ME? [pablov3rlly gmail com]_
