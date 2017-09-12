@@ -46,8 +46,10 @@ function arq($arqv,$size_array)	{
 		$arqv = array_values($arqv);
 
 
+		echo "\nWord List divided into  " .sizeof($arqv)." PARTS";
 		echo "\nTest started: ";
-		echo "\nNumber of wordlists: " . sizeof($arqv)."\n\n";
+
+		
 
 		foreach ($arqv as $key) {
 
@@ -131,16 +133,18 @@ if (filesize($wl)>=200000000) {
 
 }
 
+else {
 	#<<---- CASO A WORDLIST SEJA MENOR QUE 200mb ---->>#
-
+	unset($lin);
 	$lin = file($wl, FILE_IGNORE_NEW_LINES);
-	foreach($lin as $str)
-		{
-			$hash=SHA1($salt.SHA1($salt.SHA1($str)));
-			$size+=1;
-			$t = microtime(true) - $in;
-			if($hash==$pwd) {		echo "\n\n\n 		HASH FOUND: ".$str."\n 		TIME: ".$t."\n 		NUMBER OF STRINGS TESTED: ".$size."\n"; exit;		}
-			if(!next($lin)) { 		echo "\n\nHASH NOT FOUND IN THIS WORDLIST"; exit;		}
-		}
+		foreach($lin as $str)
+			{
+				$hash=SHA1($salt.SHA1($salt.SHA1($str)));
+				$size+=1;
+				$t = microtime(true) - $in;
+				if($hash==$pwd) {		echo "\n\n\n 		HASH FOUND: ".$str."\n 		TIME: ".$t."\n 		NUMBER OF STRINGS TESTED: ".$size."\n"; exit;		}
+				if(!next($lin)) { 		echo "\n\nHASH NOT FOUND IN THIS WORDLIST"; exit;		}
+			}
+}
 
 }?>
