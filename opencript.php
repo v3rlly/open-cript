@@ -26,7 +26,7 @@ EXEMPLE:
 if( empty($argv[1]) OR  empty($argv[2]) OR empty($argv[3]) )		{	echo $press;	}
 
 else {
-	$size=0;
+	$size = 0;
 	$pwd = $argv[1];
 	$salt = $argv[2];
 	$wl = $argv[3];
@@ -54,7 +54,7 @@ function arq($arqv,$size_array)	{
 		foreach ($arqv as $key) {
 
 			$lin = file($key, FILE_IGNORE_NEW_LINES);
-			$position=array_search($key, $arqv);
+			$position = array_search($key, $arqv);
 
 			echo "\n Testing Wordlist ".$position." ..";
 
@@ -62,7 +62,7 @@ function arq($arqv,$size_array)	{
 		#<<---- Recebe o nome da parte da wordlist e testa ---->>#
 		foreach ($lin as $str) {
 
-			$hash=SHA1($salt.SHA1($salt.SHA1($str)));
+			$hash = SHA1($salt.SHA1($salt.SHA1($str)));
 			$size+=1;
 			$t = microtime(true) - $in;
 			if($hash==$pwd) {		echo "\n\n\n 		HASH FOUND: ".$str."\n 		TIME: ".$t."\n 		NUMBER OF STRINGS TESTED: ".$size."\n"; exit;		}
@@ -139,7 +139,7 @@ else {
 	$lin = file($wl, FILE_IGNORE_NEW_LINES);
 		foreach($lin as $str)
 			{
-				$hash=SHA1($salt.SHA1($salt.SHA1($str)));
+				$hash = SHA1($salt.SHA1($salt.SHA1($str)));
 				$size+=1;
 				$t = microtime(true) - $in;
 				if($hash==$pwd) {		echo "\n\n\n 		HASH FOUND: ".$str."\n 		TIME: ".$t."\n 		NUMBER OF STRINGS TESTED: ".$size."\n"; exit;		}
