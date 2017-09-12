@@ -23,6 +23,14 @@ SALT: oInuc412L
 
 ```
 
+## TRY BIGGEST WORDLISTS:
+
+![alt text][logo]
+
+[logo]: https://image.prntscr.com/image/-o21CVT3SduzflFpIdoKSA.png "Exemple using an large wordlist."
+
+
+
 ## See too:
 [How to brute opencart passwords - tutorial](https://github.com/pabloverlly/brute-force-opencart-documentation)
 
